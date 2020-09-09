@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>新規作成</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+$(function(){
+ 
+    //カウントするフィールドを監視
+    $("#count_area").keyup(function(){
+ 
+        //現在入力されている文字
+        var text = $(this).val();
+ 
+        //正確にカウントするため改行コード削除
+        text = text.replace((new RegExp("\r\n","g")),"");
+        text = text.replace((new RegExp("\n","g")),"");
+ 
+        //現在の文字数
+        var count = text.length;
+ 
+        //管理者が設定した上限文字数
+        var moji_limit = $(this).attr("limit");
+ 
+        //文字数をリアルタイムの表示
+        $("#moji_suu").text(count);
+ 
+        //処理分け
+        if(count == 0){
+     
+            //字を消して0文字となった場合。
+            $("#moji_suu").text("0");
+     
+        } else if(count > moji_limit) {
+ 
+            //上限文字数を超えたら赤色表示
+            $("#moji_suu").css("color", "red");
+     
+        } else {
+ 
+            //文字数が範囲内なら色を戻す
+            $("#moji_suu").css("color", "");
+ 
+        }
+    });
+});
+</script>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="ナビゲーションの切替">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="Navbar">
+    <a class="navbar-brand" href="index.html">トップページ</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <a class="navbar-brand" href="itiran.html">提出済み一覧</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <a class="navbar-brand" href="index.html">返信一覧</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <a class="navbar-brand" href="index.html">新規作成</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+  </div><!-- /.collapse -->
+</nav>
+
+
+
+<div class="container">
+<h5>業務時間</h5>
+<select name=”time”>
+<option value=”0”>0</option>
+<option value=”1”>1</option>
+<option value=”2”>2</option>
+<option value=”3”>3</option>
+<option value=”4”>4</option>
+<option value=”5”>5</option>
+<option value=”6”>6</option>
+<option value=”7”>7</option>
+<option value=”8”>8</option>
+<option value=”9”>9</option>
+<option value=”10”>10</option>
+<option value=”11”>11</option>
+<option value=”12”>12</option>
+<option value=”13”>13</option>
+<option value=”14”>14</option>
+<option value=”15”>15</option>
+<option value=”16”>16</option>
+<option value=”17”>17</option>
+<option value=”18”>18</option>
+<option value=”19”>19</option>
+<option value=”20”>20</option>
+<option value=”21”>21</option>
+<option value=”22”>22</option>
+<option value=”23”>23</option>
+</select>:
+<select name=”minutes”>
+<option value=”00”>00</option>
+<option value=”15”>15</option>
+<option value=”30”>30</option>
+<option value=”45”>45</option>
+</select>~
+<select name=”time”>
+<option value=”0”>0</option>
+<option value=”1”>1</option>
+<option value=”2”>2</option>
+<option value=”3”>3</option>
+<option value=”4”>4</option>
+<option value=”5”>5</option>
+<option value=”6”>6</option>
+<option value=”7”>7</option>
+<option value=”8”>8</option>
+<option value=”9”>9</option>
+<option value=”10”>10</option>
+<option value=”11”>11</option>
+<option value=”12”>12</option>
+<option value=”13”>13</option>
+<option value=”14”>14</option>
+<option value=”15”>15</option>
+<option value=”16”>16</option>
+<option value=”17”>17</option>
+<option value=”18”>18</option>
+<option value=”19”>19</option>
+<option value=”20”>20</option>
+<option value=”21”>21</option>
+<option value=”22”>22</option>
+<option value=”23”>23</option>
+</select>:
+<select name=”minutes”>
+<option value=”00”>00</option>
+<option value=”15”>15</option>
+<option value=”30”>30</option>
+<option value=”45”>45</option>
+</select>
+
+<h5>休憩時間</h5>
+<select name=”time”>
+<option value=”0”>0</option>
+<option value=”1”>1</option>
+<option value=”2”>2</option>
+<option value=”3”>3</option>
+<option value=”4”>4</option>
+<option value=”5”>5</option>
+<option value=”6”>6</option>
+<option value=”7”>7</option>
+<option value=”8”>8</option>
+<option value=”9”>9</option>
+<option value=”10”>10</option>
+<option value=”11”>11</option>
+<option value=”12”>12</option>
+<option value=”13”>13</option>
+<option value=”14”>14</option>
+<option value=”15”>15</option>
+<option value=”16”>16</option>
+<option value=”17”>17</option>
+<option value=”18”>18</option>
+<option value=”19”>19</option>
+<option value=”20”>20</option>
+<option value=”21”>21</option>
+<option value=”22”>22</option>
+<option value=”23”>23</option>
+</select>:
+<select name=”minutes”>
+<option value=”00”>00</option>
+<option value=”15”>15</option>
+<option value=”30”>30</option>
+<option value=”45”>45</option>
+</select>
+<p></p>
+
+<h5>業務内容</h5>
+  <form action="/messages" method="POST" id="new-message">
+  <textarea id="message-text" name="text"  placeholder="・○○の資料作成" cols="45"></textarea>
+<h5>良かったこと</h5>
+  <div class="dropdown">
+    <select class="btn btn-primary dropdown-toggle" name="ice-cream">
+    <option value="">選択してください</option>
+    <option value="成長">成果</option>
+    <option value="成果">成長</option>
+    <option value="その他">その他</option>
+  </select>
+    <p></p>
+
+ <textarea id="count_area" minlength="30" cols="45" rows="3" placeholder="30字以上"></textarea>
+<div><span id="moji_suu">0</span>字</div>
+
+  
+<p></p>
+<h5>困ったこと</h5>                                      
+  <div class="dropdown">
+    <select class="btn btn-primary dropdown-toggle" name="ice-cream">
+    <option value="なし">なし</option>
+    <option value="職場環境">職場環境</option>
+    <option value="課題">課題</option>
+    <option value="その他">その他</option>
+  </select>
+  </div>
+<div class="checkbox">
+  <label>
+    <input type="checkbox" value="">
+    返信希望
+  </label>
+</div>
+  <textarea id="message-text" name="text" cols="45"></textarea>
+  <p></p>
+<h5>連絡事項</h5>
+<div class="checkbox">
+  <label>
+    <input type="checkbox" value="">
+    返信希望
+  </label>
+</div> 
+  <textarea id="message-text" name="text" cols="45"></textarea>
+  <p></p>
+<button type="submit" class="btn btn-primary">登録</button>
+
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog"> 
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">ひとくちアンケート</h4>
+      </div>
+        <div class="modal-body">
+          <p><h5>今日のお昼ご飯は何を食べましたか？</h5></p>
+          <button type="button" class="btn btn-outline-primary">和食</button>
+          <button type="button" class="btn btn-primary">中華</button>
+          <button type="button" class="btn btn-outline-primary">洋食</button>
+          <button type="button" class="btn btn-primary">その他</button>
+          <p></p>
+          <button type="button" class="btn btn-outline-primary">食べられなかった…</button>
+          <button type="button" class="btn btn-outline-primary">無回答で送信</button>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+  </div>
+      
+</div>
+</div>
+  
+
+
+
+
+
+
+</form>
+</div>
+</div>
+</body>
+</html>
