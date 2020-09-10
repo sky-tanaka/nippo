@@ -1,7 +1,8 @@
 flask
-dj-database-url==0.3.0
-Django==1.8.1
-django-postgrespool==0.3.0
-gunicorn==19.3.0
-SQLAlchemy==1.0.4
-whitenoise==1.0.6
+dj-database-url
+Django
+django-postgrespool
+gunicorn
+SQLAlchemy
+whitenoise
+psycopg2
